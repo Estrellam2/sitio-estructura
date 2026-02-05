@@ -1,0 +1,99 @@
+/* GENERAL */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fdf2f8;
+  margin: 0;
+}
+
+/* HERO GLOBAL */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(135deg, #f472b6, #c084fc);
+  color: white;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  animation: fadeDown 1s ease;
+}
+
+.hero .title {
+  font-size: 3rem;
+  margin: 0;
+  animation: fadeUp 1s ease;
+}
+
+/* INFORMATION */
+.information {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 3rem 2.5rem;
+  background: white;
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  animation: fadeUp 1s ease;
+}
+
+.information h2 {
+  color: #be185d;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.6rem;
+}
+
+.information p {
+  color: #6b7280;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* LISTAS */
+.information ul {
+  margin-top: 1.5rem;
+  padding-left: 1.2rem;
+}
+
+.information ul li {
+  color: #6b7280;
+  margin-bottom: 0.7rem;
+  position: relative;
+}
+
+.information ul li::marker {
+  color: #db2777;
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+  .hero .title {
+    font-size: 2.2rem;
+  }
+
+  .information {
+    margin: 2rem 1rem;
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

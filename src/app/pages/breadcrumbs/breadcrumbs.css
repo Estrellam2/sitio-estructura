@@ -1,0 +1,67 @@
+/* INFORMATION (Breadcrumbs) */
+.information {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 3rem 2.5rem;
+  background: white;
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  animation: fadeUp 1s ease;
+}
+
+.information h2 {
+  color: #be185d;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.6rem;
+}
+
+.information p {
+  color: #6b7280;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.information ul {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+
+.information ul li {
+  margin-bottom: 0.6rem;
+  color: #6b7280;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.information ul li::before {
+  content: "✨";
+  position: absolute;
+  left: -1rem;
+}
+
+.information strong {
+  display: inline-block;
+  margin-top: 1rem;
+  background: linear-gradient(135deg, #f472b6, #c084fc);
+  color: white;
+  padding: 0.6rem 1.4rem;
+  border-radius: 20px;
+  font-size: 0.95rem;
+}
+/* HERO GLOBAL (Inicio, Breadcrumbs, etc.) */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(135deg, #f472b6, #c084fc);
+  color: white;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  animation: fadeDown 1s ease;
+}
+
+.hero .title {
+  font-size: 3rem;
+  margin: 0;
+  animation: fadeUp 1s ease;
+}

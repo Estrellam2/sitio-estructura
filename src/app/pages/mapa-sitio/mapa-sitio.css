@@ -1,0 +1,162 @@
+/* GENERAL */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fdf2f8;
+  margin: 0;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(135deg, #f472b6, #c084fc);
+  color: white;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  animation: fadeDown 1s ease;
+}
+
+.hero .title {
+  font-size: 3rem;
+  margin: 0;
+  animation: fadeUp 1s ease;
+}
+
+/* INFORMATION CARD */
+.information {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 3rem 2.5rem;
+  background: white;
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  animation: fadeUp 1s ease;
+}
+
+.information h2 {
+  color: #be185d;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.6rem;
+}
+
+.information p {
+  color: #6b7280;
+  line-height: 1.7;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* LISTAS GENERALES */
+.information ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+.information ul li {
+  font-weight: 600;
+  color: #db2777;
+  margin-top: 1.2rem;
+  position: relative;
+  padding-left: 1.8rem;
+}
+
+
+
+/* MAPA DEL SITIO */
+.sitemap-list ul {
+  margin-top: 1.5rem;
+}
+
+.sitemap-list li {
+  padding-left: 0;
+}
+
+
+.sitemap-list a {
+  display: flex;
+  align-items: center;
+  padding: 0.9rem 1.2rem;
+  margin-bottom: 0.8rem;
+  background: linear-gradient(135deg, #fdf2f8, #fbcfe8);
+  border-radius: 15px;
+  color: #9d174d;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.sitemap-list a:hover {
+  transform: translateY(-4px) scale(1.02);
+  background: linear-gradient(135deg, #f472b6, #c084fc);
+  color: white;
+  box-shadow: 0 12px 30px rgba(190, 24, 93, 0.35);
+}
+
+/* ICONOS POR SECCIÓN */
+.sitemap-list a::before {
+  margin-right: 0.8rem;
+  font-size: 1.3rem;
+}
+
+.sitemap-list li:nth-child(1) a::before {
+  content: "🏠"; /* Inicio */
+}
+
+.sitemap-list li:nth-child(2) a::before {
+  content: "🍞"; /* Breadcrumbs */
+}
+
+.sitemap-list li:nth-child(3) a::before {
+  content: "🧩"; /* Elementos del sitio */
+}
+
+.sitemap-list li:nth-child(4) a::before {
+  content: "📋"; /* Menú de navegación */
+}
+
+.sitemap-list li:nth-child(5) a::before {
+  content: "🗺️"; /* Mapa del sitio */
+}
+
+.sitemap-list li:nth-child(6) a::before {
+  content: "🔍"; /* Búsqueda */
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+  .hero .title {
+    font-size: 2.2rem;
+  }
+
+  .information {
+    padding: 2rem 1.5rem;
+    margin: 2rem 1rem;
+  }
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

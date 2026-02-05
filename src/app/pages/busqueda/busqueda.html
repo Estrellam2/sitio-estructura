@@ -1,0 +1,66 @@
+<section class="hero-search">
+  <h1>Búsqueda</h1>
+  <p>Encuentra contenido dentro del sitio de forma rápida y sencilla</p>
+</section>
+
+<section class="search-container">
+
+  <!-- BUSCADOR -->
+  <div class="search-card">
+    <input
+      type="text"
+      placeholder="Buscar: menú, breadcrumbs, mapa del sitio..."
+      [(ngModel)]="query"
+      (keyup.enter)="doSearch()"
+    />
+
+    <div class="buttons">
+      <button class="primary" (click)="doSearch()">Buscar</button>
+      <button class="secondary" (click)="clear()">Limpiar</button>
+    </div>
+  </div>
+
+  <!-- FILTROS -->
+  <div class="search-card">
+    <h3>Filtros</h3>
+
+    <label>Tipo</label>
+    <select [(ngModel)]="filters.type" (change)="doSearch()">
+      <option value="todos">Todos</option>
+      <option value="pagina">Página</option>
+      <option value="seccion">Sección</option>
+    </select>
+
+    <label>Sección</label>
+    <select [(ngModel)]="filters.section" (change)="doSearch()">
+      <option value="todas">Todas</option>
+      <option *ngFor="let s of sections" [value]="s">{{ s }}</option>
+    </select>
+  </div>
+
+  <!-- RESULTADOS -->
+  <div class="search-card">
+    <h3>Resultados</h3>
+
+    <ng-container *ngIf="results$ | async as results">
+
+      <p *ngIf="results.length === 0" class="empty">
+        No se encontraron resultados
+      </p>
+
+      <a
+        *ngFor="let item of results"
+        class="result"
+        [routerLink]="item.path"
+      >
+        <div>
+          <strong>{{ item.title }}</strong>
+          <p>{{ item.description }}</p>
+        </div>
+        <span>{{ item.section }}</span>
+      </a>
+
+    </ng-container>
+  </div>
+
+</section>
